@@ -11,6 +11,11 @@ import nascimento.patrick.restaurantsfinder.csv.CSVLoader;
 import nascimento.patrick.restaurantsfinder.model.Cuisine;
 import nascimento.patrick.restaurantsfinder.model.Restaurant;
 
+/**
+ * Main class that runs this application. See readme to know how to use it.
+ * @author Patrick Nascimento
+ *
+ */
 public class ConsoleApplication {
 
 	public static void main(String[] args) {
@@ -27,6 +32,9 @@ public class ConsoleApplication {
 	}
 
 	private static void startSingleSearch(RestaurantsFinder finder, String[] args) {
+		
+		System.out.println("Single search using console parameters! ");
+		System.out.println("");
 		if (args.length == 5) {
 			String name = StringUtils.isEmpty(args[0]) ? null : args[0];
 			String cuisine = StringUtils.isEmpty(args[1]) ? null : args[1];
@@ -43,10 +51,13 @@ public class ConsoleApplication {
 
 			List<Restaurant> restaurants = finder.find(target);
 
+			System.out.println("");
 			printResults(restaurants);
 
 		} else {
 			System.out.println("The system expects 5 arguments, each separated with comas.");
+			System.out.println("Please try again!");
+			System.out.println("");
 
 		}
 
