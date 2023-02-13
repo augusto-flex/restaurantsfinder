@@ -6,7 +6,7 @@
  - Apache Maven
  
  
-###The program can work in two ways:
+## The program can work in two ways:
 
 **Single Search**
 
