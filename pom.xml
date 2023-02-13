@@ -4,6 +4,24 @@
   <artifactId>alphasights</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
+  <properties>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+  </properties>
+  
+  <build>
+    <plugins>
+        <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>3.0.0</version>
+            <configuration>
+                <mainClass>nascimento.patrick.main.ConsoleApplication</mainClass>
+            </configuration>
+        </plugin>
+    </plugins>
+  </build>
+  
   
   <dependencies>
   	<dependency>
